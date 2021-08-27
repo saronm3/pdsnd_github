@@ -47,7 +47,7 @@ def get_filters():
     while True:
         day= input('\nWhich day would you like to filter by monday, tuesday, wednesday, thursday, friday, saturday, or sunday?: ').lower()
         if day in days:
-            break
+            break #This will cause it to go to the next question
         else:
             print('\nTry Again: This is case sensitive; Check spelling and choose between the options listed')
             
@@ -227,10 +227,10 @@ def raw_data(df): #This will ask the user if they want to see raw data
                     data += 5
                     print(df.iloc[data : data + 5])
                 elif ask_again == 'no':
-                    break
+                    break 
                 else:
                     print('\nTry Again: This is case sensitive; Please type in yes or no: ')
-            break      
+            break  #This will break to loop and go to the next question    
         elif ask_for_raw_data == 'no':
             break
        
